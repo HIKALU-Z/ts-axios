@@ -78,7 +78,6 @@ axios({
   data: arr
 })
 
-
 // header
 
 axios({
@@ -109,4 +108,28 @@ axios({
   method: 'post',
   url: '/base/post',
   data: searchParams
+})
+
+// handle data
+axios({
+  method: 'post',
+  url: '/base/post',
+  data: {
+    a: 1,
+    b: 2
+  }
+}).then(res => {
+  console.log(res)
+})
+
+axios({
+  method: 'post',
+  url: '/base/post',
+  responseType: 'json',
+  data: {
+    a: 1,
+    b: 2
+  }
+}).then(res => {
+  console.log(res)
 })
